@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 flex justify-center">
               <img
-                src="/api/placeholder/600/400"
+                src="/assets/home/desktop/image-hero.jpg"
                 alt="XX99 Mark II Headphones"
                 className="max-w-full h-auto"
               />
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="bg-white rounded-lg p-8 text-center group hover:shadow-md transition-shadow duration-200">
             <div className="mb-6">
               <img
-                src="/api/placeholder/150/150"
+                src="/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
                 alt="Headphones"
                 className="mx-auto w-32 h-32 object-contain"
               />
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="bg-white rounded-lg p-8 text-center group hover:shadow-md transition-shadow duration-200">
             <div className="mb-6">
               <img
-                src="/api/placeholder/150/150"
+                src="/assets/home/desktop/image-speaker-zx9.png"
                 alt="Speakers"
                 className="mx-auto w-32 h-32 object-contain"
               />
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="bg-white rounded-lg p-8 text-center group hover:shadow-md transition-shadow duration-200">
             <div className="mb-6">
               <img
-                src="/api/placeholder/150/150"
+                src="/assets/home/desktop/image-earphones-yx1.jpg"
                 alt="Earphones"
                 className="mx-auto w-32 h-32 object-contain"
               />
@@ -149,7 +149,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="text-center lg:text-left">
               <img
-                src="/api/placeholder/300/400"
+                src="/assets/home/desktop/image-speaker-zx9.png"
                 alt="ZX9 Speaker"
                 className="mx-auto lg:mx-0 max-w-[300px] h-auto"
               />
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <img
-                src="/api/placeholder/400/300"
+                src="/assets/home/desktop/image-speaker-zx7.jpg"
                 alt="ZX7 Speaker"
                 className="mx-auto max-w-full h-auto"
               />
@@ -202,7 +202,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-[#F1F1F1] rounded-lg p-8 flex items-center justify-center">
             <img
-              src="/api/placeholder/400/300"
+              src="/assets/home/desktop/image-earphones-yx1.jpg"
               alt="YX1 Earphones"
               className="max-w-full h-auto"
             />
@@ -226,7 +226,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="lg:order-2">
             <img
-              src="/api/placeholder/500/600"
+              src="/assets/product-xx59-headphones/desktop/image-gallery-1.jpg"
               alt="Person with headphones"
               className="w-full h-auto rounded-lg"
             />

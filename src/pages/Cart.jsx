@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
-// Dynamically import all assets
-const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
-  eager: true,
-  import: 'default',
-});
+// // Dynamically import all assets
+// const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
+//   eager: true,
+//   import: 'default',
+// });
 
-function resolveImage(path) {
-  if (typeof path !== 'string') return null;
-  const normalized = path.replace('./assets', '../assets');
-  return images[normalized];
-}
+// function resolveImage(path) {
+//   if (typeof path !== 'string') return null;
+//   const normalized = path.replace('./assets', '../assets');
+//   return images[normalized];
+// }
 
 export default function Cart() {
   const { cart, updateQty, removeItem } = useContext(CartContext);
@@ -68,7 +68,7 @@ export default function Cart() {
           {/* Cart Items */}
           <div className="space-y-6 mb-8">
             {cart.map((item) => {
-              const imageSrc = resolveImage(item.image);
+              // const imageSrc = resolveImage(item.image);
               return (
                 <div
                   key={item.id}
@@ -76,9 +76,9 @@ export default function Cart() {
                 >
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-[#F1F1F1] rounded-lg flex items-center justify-center overflow-hidden">
-                      {imageSrc ? (
+                      {item.image ? (
                         <img
-                          src={imageSrc}
+                          src={item.image.desktop}
                           alt={item.name}
                           className="w-full h-full object-contain"
                         />

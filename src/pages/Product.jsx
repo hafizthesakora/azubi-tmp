@@ -3,17 +3,17 @@ import { useParams } from 'react-router-dom';
 import products from '../data.json';
 import { CartContext } from '../context/CartContext';
 
-// Dynamically import all assets
-const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
-  eager: true,
-  import: 'default',
-});
+// // Dynamically import all assets
+// const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
+//   eager: true,
+//   import: 'default',
+// });
 
-function resolveImage(path) {
-  if (!path) return null;
-  const normalized = path.replace('./assets', '../assets');
-  return images[normalized];
-}
+// function resolveImage(path) {
+//   if (!path) return null;
+//   const normalized = path.replace('./assets', '../assets');
+//   return images[normalized];
+// }
 
 export default function Product() {
   const { id } = useParams();
@@ -38,7 +38,7 @@ export default function Product() {
     );
   }
 
-  const imageSrc = resolveImage(product.image?.desktop);
+  // const imageSrc = resolveImage(product.image?.desktop);
 
   const handleAddToCart = () => {
     for (let i = 0; i < quantity; i++) {
@@ -61,9 +61,9 @@ export default function Product() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Product Image */}
           <div className="bg-gray-100 rounded-lg overflow-hidden">
-            {imageSrc ? (
+            {product.image?.desktop ? (
               <img
-                src={imageSrc}
+                src={product.image?.desktop}
                 alt={product.name}
                 className="w-full h-96 lg:h-[500px] object-contain p-8"
               />

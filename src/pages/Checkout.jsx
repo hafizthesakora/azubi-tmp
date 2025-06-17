@@ -3,17 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import OrderConfirmationModal from '../components/OrderConfirmationModal';
 
-// Dynamically import all assets
-const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
-  eager: true,
-  import: 'default',
-});
+// // Dynamically import all assets
+// const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
+//   eager: true,
+//   import: 'default',
+// });
 
-function resolveImage(path) {
-  if (typeof path !== 'string') return null;
-  const normalized = path.replace('./assets', '../assets');
-  return images[normalized];
-}
+// function resolveImage(path) {
+//   if (typeof path !== 'string') return null;
+//   const normalized = path.replace('./assets', '../assets');
+//   return images[normalized];
+// }
 
 export default function Checkout() {
   const { cart, clearCart } = useContext(CartContext);
@@ -409,7 +409,7 @@ export default function Checkout() {
               {/* Cart Items */}
               <div className="space-y-4 mb-6">
                 {cart.map((item) => {
-                  const imageSrc = resolveImage(item.image);
+                  // const imageSrc = resolveImage(item.image);
                   return (
                     <div
                       key={item.id}
@@ -417,9 +417,9 @@ export default function Checkout() {
                     >
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 bg-[#F1F1F1] rounded-lg flex items-center justify-center overflow-hidden">
-                          {imageSrc ? (
+                          {item.image.desktop ? (
                             <img
-                              src={imageSrc}
+                              src={item.image.desktop}
                               alt={item.name}
                               className="w-full h-full object-contain"
                             />

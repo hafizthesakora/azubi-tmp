@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
-  eager: true,
-  import: 'default',
-});
+// const images = import.meta.glob('../assets/**/*.{jpg,jpeg,png}', {
+//   eager: true,
+//   import: 'default',
+// });
 
-function resolveImage(path) {
-  if (!path) return null;
-  const normalized = path.replace('./assets', '../assets');
-  return images[normalized];
-}
+// function resolveImage(path) {
+//   if (!path) return null;
+//   const normalized = path.replace('./assets', '../assets');
+//   return images[normalized];
+// }
 
 export default function ProductCard({ product }) {
   if (!product) return null;
 
-  const imageSrc = resolveImage(product.image?.desktop);
+  // const imageSrc = resolveImage(product.image?.desktop);
 
   return (
     <div className="bg-white rounded-lg overflow-hidden group">
       <div className="aspect-square overflow-hidden bg-[#F1F1F1]">
-        {imageSrc ? (
+        {product.image ? (
           <img
-            src={imageSrc}
+            src={product.image.desktop}
             alt={product.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
